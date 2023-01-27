@@ -1,0 +1,29 @@
+@startuml 5-13
+package Operation {
+  class PCOperator
+  interface KeyboardInterface
+  interface PointerDeviceInterface
+}
+package Connection {
+  class USBPort
+  interface USBDeviceInterface
+}
+package BuiltinDevice {
+  class BuiltinKeyboard
+  class BuiltinTrackpad
+}
+package ExternalDevice {
+  class USBKeyboard
+  class USBMouse
+}
+
+  KeyboardInterface <-- PCOperator
+  PointerDeviceInterface <-- PCOperator
+  USBDeviceInterface <-- USBPort
+  KeyboardInterface <|.. BuiltinKeyboard
+  KeyboardInterface <|.. USBKeyboard
+  PointerDeviceInterface <|.. BuiltinTrackpad
+  PointerDeviceInterface <|.. USBMouse
+  USBDeviceInterface <|.. USBKeyboard
+  USBDeviceInterface <|.. USBMouse
+@enduml
