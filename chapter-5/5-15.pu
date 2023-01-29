@@ -1,0 +1,8 @@
+@startuml
+package Connection {
+  class USBPort
+}
+class USBKeyboard
+
+  USBPort --> USBKeyboard
+@enduml
