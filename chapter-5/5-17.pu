@@ -1,0 +1,12 @@
+@startuml
+package Core {
+  class NumberConverter
+  interface ReplaceRuleInterface
+}
+class CyclicNumberRule
+class PassThroughRule
+
+  NumberConverter o--"*" ReplaceRuleInterface
+  ReplaceRuleInterface <|.. CyclicNumberRule
+  ReplaceRuleInterface <|.. PassThroughRule
+@enduml
