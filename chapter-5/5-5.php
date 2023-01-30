@@ -1,12 +1,15 @@
 <?php
 
-class WritingDatabaseDriverVer2 impliments WritingDatabaseDriverInterface
+class WritingDatabaseDriverVer2 implements WritingDatabaseDriverInterface
 {
-    public function write(string $key, mixed $data): void { }
+  public function write(string $key, mixed $data): void
+  {
+  }
 }
 
-class ReadingDatabaseDriverVer2 impliments ReadingDatabaseDriverInterface
+class ReadingDatabaseDriverVer2 implements ReadingDatabaseDriverInterface
 {
-    public function read(string $key): mixed { }
+  public function read(string $key): mixed
+  {
+  }
 }
-
