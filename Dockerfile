@@ -12,3 +12,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 RUN composer selfupdate && \
     composer require phpunit/phpunit --dev ^9
+
+COPY ./composer.json /
+RUN composer install
